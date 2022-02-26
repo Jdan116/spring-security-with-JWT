@@ -1,0 +1,8 @@
+server:
+  port: 8084
+
+jwt:
+  secret: ThisAintSecret
+  token:
+    expire:
+      duration: 720

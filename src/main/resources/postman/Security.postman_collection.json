@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "d337e9a8-1ff6-4170-9b90-655efeb76c98",
+		"name": "Security",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"admin\",\n    \"password\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8084/user/authenticate",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"user",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY0NTk1MjY1NywiaWF0IjoxNjQ1OTE2NjU3fQ.YmzMsOv9abBnZ6Eu3ddRl4W1sFDddq2q4ymcAZddZa0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8084/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
